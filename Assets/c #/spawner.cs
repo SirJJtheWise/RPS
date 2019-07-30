@@ -8,6 +8,7 @@ public class spawner : MonoBehaviour
     private float tbtw;
     public float stbtw;
     public GameObject[] enemys;
+    public float minTime;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,10 @@ public class spawner : MonoBehaviour
             ran = Random.Range(0, 3);
             Instantiate(enemys[ran], transform.position, Quaternion.identity);
             tbtw = stbtw;
+            if (stbtw > minTime)
+            {
+                stbtw -= 0.1f;
+            }
         }
         else { tbtw -= Time.deltaTime; }
         

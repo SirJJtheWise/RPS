@@ -21,7 +21,10 @@ public class player2 : status
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0) { Destroy(gameObject); }
+        if (health <= 0) {
+            Destroy(gameObject);
+            winscreen.SetActive(true);
+        }
         else
 
        if (TBtw <= 0)
@@ -46,6 +49,7 @@ public class player2 : status
             }
         }
         else TBtw -= Time.deltaTime;
+        healthbar.text = System.Convert.ToString(health);
     }
     
 }

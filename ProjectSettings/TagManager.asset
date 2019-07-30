@@ -9,6 +9,7 @@ TagManager:
   - scissor
   - Player1
   - Player2
+  - score
   layers:
   - Default
   - TransparentFX

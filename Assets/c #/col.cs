@@ -30,6 +30,7 @@ public class col : MonoBehaviour
         else
         if (col.CompareTag("rock"))
         {
+            GameObject.FindGameObjectWithTag("score").GetComponent<scpresystem>().scorvalue += 1;
             Destroy(col.gameObject);
         }
         else

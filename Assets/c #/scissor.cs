@@ -29,6 +29,7 @@ public class scissor : MonoBehaviour
         else
         if (col.CompareTag("paper"))
         {
+            GameObject.FindGameObjectWithTag("score").GetComponent<scpresystem>().scorvalue += 1;
             Destroy(col.gameObject);
         }
         else

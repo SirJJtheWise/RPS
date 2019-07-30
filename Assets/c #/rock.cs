@@ -30,6 +30,7 @@ public class rock : MonoBehaviour
         else
         if (col.CompareTag("scissor"))
         {
+            GameObject.FindGameObjectWithTag("score").GetComponent<scpresystem>().scorvalue += 1;
             Destroy(col.gameObject);
         }
         else
